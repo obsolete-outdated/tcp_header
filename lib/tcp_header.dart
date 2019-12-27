@@ -9,3 +9,7 @@ Uint8List dataWithTCPHeader(final Uint8List data) => Uint8List.fromList(((Uint8L
 bool dataWithTCPHeaderCanBeDecoded(final Uint8List dataWithTCPHeader) => dataWithTCPHeader.length>_headerLength && dataWithTCPHeader.length == dataWithTCPHeader.buffer.asByteData().getUint32(0);
 
 Uint8List dataFromDataWithTCPHeader(final Uint8List dataWithTCPHeader) => dataWithTCPHeader.sublist(_headerLength);
+
+bool headerCanBeExtracted(final Uint8List dataWithTCPHeader) => dataWithTCPHeader.length>=_headerLength;
+
+int lengthHeaderFromData(final Uint8List dataWithTCPHeader) => dataWithTCPHeader.sublist(0, 4).buffer.asByteData().getUint32(0);
