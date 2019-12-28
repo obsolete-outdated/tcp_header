@@ -1,6 +1,6 @@
 name: tcp_header
 description: A simple way to prevent TCP socket from splitting your data into random chunks
-version: 1.0.0
+version: 1.0.1
 author: Subbotin Aleksei <darkandjeweled@gmail.com>
 homepage: https://github.com/Moonspeaker/tcp_header
 
